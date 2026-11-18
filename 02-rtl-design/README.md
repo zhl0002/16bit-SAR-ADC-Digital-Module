@@ -1,6 +1,6 @@
 # 02 RTL 设计与功能验证
 
-本项目从 [01 Verilog 源码](../01-verilog-source/) 选取校准模块 `cali_logic`，用独立的比较器和 CDAC 数字模型验证控制、权重计算及读出。综合阶段采用这里的 [已验证 RTL](rtl/cali_logic.v)。
+本项目从 [01 Verilog](../01-Verilog/) 选取校准模块 `cali_logic`，用独立的比较器和 CDAC 数字模型验证控制、权重计算及读出。综合阶段采用这里的 [已验证 RTL](rtl/cali_logic.v)。
 
 ## 步骤与目的
 
