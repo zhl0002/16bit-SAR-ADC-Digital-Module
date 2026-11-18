@@ -1,6 +1,6 @@
 # 03 逻辑综合
 
-本项目把 [02 阶段已验证的 `cali_logic` RTL](../02-rtl-design/rtl/cali_logic.v) 综合成标准单元门级网表。记录使用 Synopsys Design Compiler W-2024.09-SP3，图形界面为 Design Vision。映射使用 SMIC18 典型库，试综合时钟为 10 ns。
+本项目把 [02 阶段已验证的 `cali_logic` RTL](../02-RTL-Design/rtl/cali_logic.v) 综合成标准单元门级网表。记录使用 Synopsys Design Compiler W-2024.09-SP3，图形界面为 Design Vision。映射使用 SMIC18 典型库，试综合时钟为 10 ns。
 
 ## 步骤与目的
 
