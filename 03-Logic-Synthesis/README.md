@@ -21,7 +21,7 @@
 | [`constraints/cali_logic_trial_10ns.sdc`](constraints/cali_logic_trial_10ns.sdc) | 在 `clk_i` 上定义 10 ns 的 `cal_clk`。供综合和后续时序复查使用 |
 | [`netlist/cali_logic_mapped.v`](netlist/cali_logic_mapped.v) | 原试综合的门级 Verilog 网表，记录标准单元和连线。它可作为形式等价验证的实现侧输入 |
 | [`dc_db/`](dc_db/) | 原 Design Vision 保存的 DDC 项目快照。包括顶层 `cali_logic.ddc` 与三个层次子设计的 DDC 文件，重新打开后可配合匹配的时序库检查电路和报告 |
-| [`formality/cali_logic.svf`](formality/cali_logic.svf) | 用综合脚本重新生成的变换指导文件。重跑网表的 Verilog 模块内容与仓库网表逐字节一致，SVF 已通过 Formality 读入检查。以后和对应 RTL、网表一起用于等价验证 |
+| [`formality/cali_logic.svf`](formality/cali_logic.svf) | 用综合脚本重新生成的变换指导文件。重跑网表的 Verilog 模块内容与仓库网表逐字节一致，SVF 已通过 Formality 读入检查。已与对应 RTL、网表一同用于[第 04 阶段的形式等价验证](../04-Formal-Verification/) |
 | [`reports/area.rpt`](reports/area.rpt) | 原面积报告，保留单元数、缓冲器数量及面积数据 |
 | [`reports/timing_setup_10ns.rpt`](reports/timing_setup_10ns.rpt) | 原建立时间报告，保留起点、终点、逐级延迟和余量 |
 
@@ -48,4 +48,4 @@ SMIC18_DB=/path/to/typical.db SYNTH_OUT="$scratch/results" \
 - [门级 Verilog 网表](netlist/cali_logic_mapped.v)记录综合后的标准单元实例及连接。
 - [试综合 SDC](constraints/cali_logic_trial_10ns.sdc)记录 `clk_i` 上的时钟定义和单位。
 
-10 ns 是探索用约束，外部端口时序预算还需结合系统接口确定。面积是单元库面积之和，实际布局占地还包含实现开销。下一步做形式等价验证，比较本目录网表与第 02 阶段 RTL。正式目标确定后，再用相应约束和工艺角重新综合和检查时序。
+10 ns 是探索用约束，外部端口时序预算还需结合系统接口确定。面积是单元库面积之和，实际布局占地还包含实现开销。本目录的网表已与第 02 阶段 RTL 完成[形式等价验证](../04-Formal-Verification/)，706 个比较点全部通过。正式目标确定后，再用相应约束和工艺角重新综合和检查时序。
