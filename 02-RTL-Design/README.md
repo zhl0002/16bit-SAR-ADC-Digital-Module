@@ -14,6 +14,21 @@
 | 6. 检查再次启动和复位 | 用 `tb_cali_full_repeat` 连续启动两轮，然后拉低复位并读取权重 | 检查前一次结果不会影响下一轮。两轮共 22,016 次请求，复位后的高位权重清零且失效 |
 | 7. 审查并回归 | 运行 VCS Lint 检查赋值和比较位宽，整理常量后重新编译七份 testbench。以各组 `PASS` 与正常 `$finish` 作为运行检查点 | 确认源码整理后的行为。在本次快照中，九组配置全部通过。保留的比较位宽和空语句提示已按默认参数审查 |
 
+## 工程文件
+
+| 文件 | 功能和用途 |
+| --- | --- |
+| [`rtl/cali_logic.v`](rtl/cali_logic.v) | 验证通过的校准 RTL，包含控制、定点计算和权重读写。它也是第 03 阶段的综合输入 |
+| [`rtl.f`](rtl.f) | 独立模块的源码清单。从本目录调用 VCS `-f rtl.f` 时，适用于设计侧编译或运行 `+lint=all` |
+| [`tb/`](tb/) | 七份自检 testbench。按上表选需要的测试顶层，可单独跑一个测试或在 Verdi 中看波形 |
+| [`scripts/run_regression.sh`](scripts/run_regression.sh) | 批量编译七份 testbench 并运行九组配置。失调三组复用同一 `simv`，各自保留日志和波形。脚本检查退出状态、`PASS` 和 `$finish` |
+| [`results/regression.rpt`](results/regression.rpt) | 已完成回归的逐用例记录，包含通过标志、比较请求、失调和复位等关键信息 |
+| [`results/full_calibration.csv`](results/full_calibration.csv) | 完整校准的 20 项读出，逐行对照 RTL、算法参考和模型权重，便于复核误差 |
+| [`results/source_manifest.sha256`](results/source_manifest.sha256) | 八份已验证输入文件的校验值。在本目录运行 `sha256sum -c results/source_manifest.sha256` 可核对版本 |
+| [`reports/lint.rpt`](reports/lint.rpt) | 位宽清理后的 VCS Lint 摘录，包含默认参数下保留的五条长度比较提示和一条空语句提示，可按报告行号定位 RTL |
+
+在本目录运行 `bash scripts/run_regression.sh` 复跑全部用例。`VCS_BIN` 可指定 VCS 可执行文件路径，默认使用 `PATH` 中的 `vcs`。每次结果写到新的 `runs/regression.*` 目录。
+
 ## 软件操作速查
 
 1. **准备单个测试**。在 Verdi 中用 **File → Import Design → From File** 加入 [RTL](rtl/cali_logic.v) 和一份 [testbench](tb/)，语言选 SystemVerilog。测试顶层是该 `.sv` 文件里的模块，`dut` 是它下面的校准实例。

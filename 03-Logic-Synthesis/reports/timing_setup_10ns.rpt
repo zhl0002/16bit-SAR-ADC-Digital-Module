@@ -1,0 +1,120 @@
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : cali_logic
+Version: W-2024.09-SP3
+Date   : Wed Nov 18 00:38:41 2026
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: state_q_reg[3]
+              (rising edge-triggered flip-flop clocked by cal_clk)
+  Endpoint: sum_q_reg[19]
+            (rising edge-triggered flip-flop clocked by cal_clk)
+  Path Group: cal_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock cal_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  state_q_reg[3]/CK (DFFRHQX1)                            0.00       0.00 r
+  state_q_reg[3]/Q (DFFRHQX1)                             0.32       0.32 r
+  U2020/Y (INVXL)                                         0.11       0.43 f
+  U1857/Y (OR2X2)                                         0.17       0.60 f
+  U3473/Y (OR2X2)                                         0.14       0.74 f
+  U1851/Y (OR2X2)                                         0.17       0.91 f
+  U2175/Y (INVX1)                                         0.16       1.07 r
+  U3517/Y (OR2X2)                                         0.11       1.18 r
+  U1840/Y (INVX1)                                         0.07       1.25 f
+  U2575/Y (OAI22X1)                                       0.27       1.51 r
+  U1849/Y (INVX1)                                         0.13       1.64 f
+  U3521/Y (OR2X2)                                         0.15       1.79 f
+  U1865/Y (OR2X2)                                         0.14       1.92 f
+  U2165/Y (INVX1)                                         0.65       2.57 r
+  U2019/Y (AOI222X1)                                      0.14       2.72 f
+  U3728/Y (AND4X2)                                        0.21       2.93 f
+  U3729/Y (OR2X2)                                         0.14       3.07 f
+  U2331/Y (NOR2X1)                                        0.12       3.19 r
+  sub_229/B[0] (cali_logic_DW01_sub_0)                    0.00       3.19 r
+  sub_229/U66/Y (INVX1)                                   0.04       3.23 f
+  sub_229/U64/Y (AND2X2)                                  0.11       3.34 f
+  sub_229/U35/Y (AND2X2)                                  0.10       3.44 f
+  sub_229/U36/Y (AND2X2)                                  0.10       3.54 f
+  sub_229/U37/Y (AND2X2)                                  0.10       3.65 f
+  sub_229/U38/Y (AND2X2)                                  0.10       3.75 f
+  sub_229/U39/Y (AND2X2)                                  0.10       3.85 f
+  sub_229/U40/Y (AND2X2)                                  0.10       3.96 f
+  sub_229/U41/Y (AND2X2)                                  0.10       4.06 f
+  sub_229/U42/Y (AND2X2)                                  0.10       4.16 f
+  sub_229/U43/Y (AND2X2)                                  0.10       4.26 f
+  sub_229/U44/Y (AND2X2)                                  0.10       4.37 f
+  sub_229/U45/Y (AND2X2)                                  0.10       4.47 f
+  sub_229/U46/Y (AND2X2)                                  0.10       4.57 f
+  sub_229/U47/Y (AND2X2)                                  0.10       4.67 f
+  sub_229/U48/Y (AND2X2)                                  0.10       4.78 f
+  sub_229/U49/Y (AND2X2)                                  0.10       4.88 f
+  sub_229/U50/Y (AND2X2)                                  0.10       4.98 f
+  sub_229/U51/Y (AND2X2)                                  0.10       5.08 f
+  sub_229/U52/Y (AND2X2)                                  0.10       5.19 f
+  sub_229/U53/Y (AND2X2)                                  0.10       5.29 f
+  sub_229/U54/Y (AND2X2)                                  0.10       5.39 f
+  sub_229/U55/Y (AND2X2)                                  0.10       5.49 f
+  sub_229/U56/Y (AND2X2)                                  0.10       5.60 f
+  sub_229/U57/Y (AND2X2)                                  0.10       5.70 f
+  sub_229/U58/Y (AND2X2)                                  0.10       5.80 f
+  sub_229/U59/Y (AND2X2)                                  0.10       5.91 f
+  sub_229/U60/Y (AND2X2)                                  0.10       6.01 f
+  sub_229/U61/Y (AND2X2)                                  0.10       6.11 f
+  sub_229/U62/Y (AND2X2)                                  0.10       6.21 f
+  sub_229/U63/Y (AND2X2)                                  0.10       6.32 f
+  sub_229/U65/Y (AND2X2)                                  0.10       6.42 f
+  sub_229/U1/Y (NAND2X1)                                  0.05       6.47 r
+  sub_229/DIFF[34] (cali_logic_DW01_sub_0)                0.00       6.47 r
+  U1841/Y (AND2X2)                                        0.20       6.67 r
+  add_32/B[41] (cali_logic_DW01_add_1)                    0.00       6.67 r
+  add_32/U65/Y (OR2XL)                                    0.17       6.84 r
+  add_32/U64/Y (NAND3XL)                                  0.12       6.95 f
+  add_32/U249/Y (NAND2X1)                                 0.07       7.03 r
+  add_32/U248/Y (NAND2X1)                                 0.04       7.07 f
+  add_32/U242/Y (NAND2X1)                                 0.05       7.12 r
+  add_32/U33/Y (AOI21XL)                                  0.04       7.16 f
+  add_32/U5/Y (OAI21XL)                                   0.13       7.29 r
+  add_32/U243/Y (XOR2X1)                                  0.17       7.46 f
+  add_32/SUM[40] (cali_logic_DW01_add_1)                  0.00       7.46 f
+  U1842/Y (INVX1)                                         0.07       7.53 r
+  U2582/Y (XOR2X1)                                        0.16       7.68 f
+  U2580/Y (NAND2X1)                                       0.06       7.74 r
+  U2334/Y (AOI21X1)                                       0.05       7.80 f
+  U2332/Y (NAND2X1)                                       0.07       7.86 r
+  U2579/Y (INVX1)                                         0.03       7.89 f
+  U2578/Y (OAI221XL)                                      0.18       8.08 r
+  U1853/Y (OR2X2)                                         0.17       8.24 r
+  U2176/Y (NOR2X1)                                        0.06       8.30 f
+  U3480/Y (OR2X2)                                         0.14       8.43 f
+  U3519/Y (OR2X2)                                         0.14       8.57 f
+  U1852/Y (OR3XL)                                         0.21       8.78 f
+  U2336/Y (OAI221XL)                                      0.20       8.98 r
+  U1868/Y (INVXL)                                         0.23       9.21 f
+  U1862/Y (INVXL)                                         0.40       9.62 r
+  U2354/Y (OAI222XL)                                      0.12       9.73 f
+  sum_q_reg[19]/D (DFFRHQX1)                              0.00       9.73 f
+  data arrival time                                                  9.73
+
+  clock cal_clk (rise edge)                              10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  sum_q_reg[19]/CK (DFFRHQX1)                             0.00      10.00 r
+  library setup time                                     -0.23       9.77
+  data required time                                                 9.77
+  --------------------------------------------------------------------------
+  data required time                                                 9.77
+  data arrival time                                                 -9.73
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+

@@ -1,0 +1,28 @@
+****************************************
+Report : area
+Design : cali_logic
+Version: W-2024.09-SP3
+Date   : Wed Nov 18 00:42:16 2026
+****************************************
+
+Library(s) Used:
+
+    typical (File: typical.db)
+
+Number of ports:                          389
+Number of nets:                          3391
+Number of cells:                         3162
+Number of combinational cells:           2569
+Number of sequential cells:               584
+Number of macros/black boxes:               0
+Number of buf/inv:                        615
+Number of references:                      64
+
+Combinational area:              41423.659756
+Buf/Inv area:                     4297.708854
+Noncombinational area:           40768.358765
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 82192.018520
+Total area:                 undefined

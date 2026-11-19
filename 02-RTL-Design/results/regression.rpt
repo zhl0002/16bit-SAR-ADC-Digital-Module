@@ -1,0 +1,80 @@
+cali_logic RTL regression evidence
+Simulator: Synopsys VCS W-2024.09-SP1
+Source hashes: source_manifest.sha256 (relative to 02-RTL-Design)
+Original run: 7 successful compilations and 9 passing configurations.
+The lines below are excerpts from the archived test outputs.
+
+[control] tb_cali_logic (default options)
+Exit code: 0
+PASS: control interface tests, 90233 checks
+$finish at simulation time             21281000
+
+[b6_ideal] tb_cali_b6 (default options)
+Exit code: 0
+PASS: b6 ideal calibration
+b6 weight = 8192
+comparison requests = 384
+$finish at simulation time             41026000
+
+[b6_mismatch] tb_cali_b6_mismatch (default options)
+Exit code: 0
+PASS: b6 mismatch calibration
+b6 weight = 8448
+comparison requests = 384
+$finish at simulation time             41026000
+
+[full_reference] tb_cali_full (default options)
+Exit code: 0
+PASS: full-flow reference consistency
+comparison requests = 11008
+$finish at simulation time           1024631000
+
+[offset_0] tb_cali_b6_offset +CMP_OFFSET=0
+Exit code: 0
+PASS: b6 offset cancellation
+comparator offset = 0 W0
+first positive measurement Q8 = 8192
+first negative measurement Q8 = -8704
+b6 weight = 8448
+comparison requests = 384
+$finish at simulation time             41026000
+
+[offset_p8] tb_cali_b6_offset +CMP_OFFSET=8
+Exit code: 0
+PASS: b6 offset cancellation
+comparator offset = 8 W0
+first positive measurement Q8 = 10240
+first negative measurement Q8 = -6656
+b6 weight = 8448
+comparison requests = 384
+$finish at simulation time             41026000
+
+[offset_m8] tb_cali_b6_offset +CMP_OFFSET=-8
+Exit code: 0
+PASS: b6 offset cancellation
+comparator offset = -8 W0
+first positive measurement Q8 = 6144
+first negative measurement Q8 = -10752
+b6 weight = 8448
+comparison requests = 384
+$finish at simulation time             41026000
+
+[full_repeat] tb_cali_full_repeat (default options)
+Exit code: 0
+PASS: run 1, all 20 weights matched, requests = 11008
+PASS: run 2, all 20 weights matched, requests = 11008
+total comparison requests before reset = 22016
+PASS: reset recovery, low 6 weights valid, high 14 weights zero and invalid
+PASS: repeated full calibration and reset recovery
+$finish at simulation time           2049471000
+
+[full_latency] tb_cali_full_latency (default options)
+Exit code: 0
+PASS: run 1, all 20 weights matched, requests = 11008
+PASS: latency run 1, delays 1/2/4/8 cycles, 2752 responses per delay in this run
+PASS: run 2, all 20 weights matched, requests = 11008
+PASS: latency run 2, delays 1/2/4/8 cycles, 2752 responses per delay in this run
+total comparison requests before reset = 22016
+PASS: reset recovery, low 6 weights valid, high 14 weights zero and invalid
+PASS: variable comparator latency and reset recovery
+$finish at simulation time           2875071000

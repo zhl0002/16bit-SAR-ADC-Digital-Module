@@ -13,6 +13,28 @@
 | 5. 复查连接、时序和面积 | 再做 **Design → Check Design** 和 **Timing → Check Timing**。用 **Timing → Report Timing Paths** 查 `max` 建立时间，用 **Design → Report Area** 查单元数和面积 | 把优化后的结构、约束覆盖和内部最紧张路径分开核对。记录未指定输入到达时间的 `TIM-216` 警告 |
 | 6. 保存复核用文件 | 用 **File → Save As** 选 Verilog 并保存设计层次，在 Design Vision 底部 Console 用 `write_sdc cali_logic_trial_10ns.sdc` 导出约束。在报告区使用 **Save Report to File** 保存结果 | 固定门级电路、约束与面积时序证据，作为形式等价和后续分析的输入 |
 
+## 工程文件
+
+| 文件 | 功能和用途 |
+| --- | --- |
+| [`scripts/run_synthesis.tcl`](scripts/run_synthesis.tcl) | 在 DC 中复跑独立模块综合，按顺序分析、展开、链接、加载约束、映射并导出。使用与图形流程相同的 `compile -exact_map` |
+| [`constraints/cali_logic_trial_10ns.sdc`](constraints/cali_logic_trial_10ns.sdc) | 在 `clk_i` 上定义 10 ns 的 `cal_clk`。供综合和后续时序复查使用 |
+| [`netlist/cali_logic_mapped.v`](netlist/cali_logic_mapped.v) | 原试综合的门级 Verilog 网表，记录标准单元和连线。它可作为形式等价验证的实现侧输入 |
+| [`dc_db/`](dc_db/) | 原 Design Vision 保存的 DDC 项目快照。包括顶层 `cali_logic.ddc` 与三个层次子设计的 DDC 文件，重新打开后可配合匹配的时序库检查电路和报告 |
+| [`formality/cali_logic.svf`](formality/cali_logic.svf) | 用综合脚本重新生成的变换指导文件。重跑网表的 Verilog 模块内容与仓库网表逐字节一致，SVF 已通过 Formality 读入检查。以后和对应 RTL、网表一起用于等价验证 |
+| [`reports/area.rpt`](reports/area.rpt) | 原面积报告，保留单元数、缓冲器数量及面积数据 |
+| [`reports/timing_setup_10ns.rpt`](reports/timing_setup_10ns.rpt) | 原建立时间报告，保留起点、终点、逐级延迟和余量 |
+
+有匹配的 SMIC18 `typical.db` 和 DC 环境时，可从本目录用以下命令复跑。脚本另外生成一套可重新打开的 DDC、与该次网表配套的 SVF，以及结构、约束、面积和时序报告。`SYNTH_OUT` 指定一个尚未存在的输出目录。
+
+```bash
+script="$PWD/scripts/run_synthesis.tcl"
+scratch=$(mktemp -d)
+cd "$scratch"
+SMIC18_DB=/path/to/typical.db SYNTH_OUT="$scratch/results" \
+    dc_shell -no_home_init -no_local_init -f "$script"
+```
+
 ## 本次试综合结果
 
 | 项目 | 结果 |

@@ -1,0 +1,32 @@
+cali_logic RTL lint excerpts
+VCS W-2024.09-SP1, +lint=all, top cali_logic, default parameters
+
+Lint-[NS] Null statement
+rtl/cali_logic.v, 250
+  Null statement is used in following verilog source.
+  Source info:                 default: ; //
+
+Lint-[ULCO] Unequal length in comparison operator
+rtl/cali_logic.v, 64
+cali_logic, "(wait_q == (CMP_TIMEOUT - 1))"
+  A left 11-bit expression is compared to a right 32-bit expression.
+
+Lint-[ULCO] Unequal length in comparison operator
+rtl/cali_logic.v, 76
+cali_logic, "(sum_q > $signed({1'b0, {(WEIGHT_W - 1) {1'b1}}}))"
+  A left 41-bit expression is compared to a right 32-bit expression.
+
+Lint-[ULCO] Unequal length in comparison operator
+rtl/cali_logic.v, 119
+cali_logic, "(wait_q == ((state_q == ST_SAMPLE) ? (SAMPLE_CYCLES - 1) : (SETTLE_CYCLES - 1)))"
+  A left 11-bit expression is compared to a right 32-bit expression.
+
+Lint-[ULCO] Unequal length in comparison operator
+rtl/cali_logic.v, 175
+cali_logic, "(pair_count_q == ((1 << PAIR_LOG2) - 1))"
+  A left 5-bit expression is compared to a right 32-bit expression.
+
+Lint-[ULCO] Unequal length in comparison operator
+rtl/cali_logic.v, 203
+cali_logic, "(wait_q == (PARK_CYCLES - 1))"
+  A left 11-bit expression is compared to a right 32-bit expression.
