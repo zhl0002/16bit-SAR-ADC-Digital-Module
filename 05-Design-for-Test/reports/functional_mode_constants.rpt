@@ -1,0 +1,15 @@
+**************************************************
+Report         : constants
+
+Reference      : r:/WORK/cali_logic
+Implementation : i:/WORK/cali_logic
+Version        : W-2024.09-SP3
+Date           : Wed Nov 18 23:58:30 2026
+**************************************************
+
+Constant    Object
+ Value       Type     Object Name
+--------    ------    -----------
+   0         port     i:/WORK/cali_logic/scan_en
+
+1

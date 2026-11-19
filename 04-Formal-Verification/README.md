@@ -51,3 +51,5 @@ cd "$scratch"
 SMIC18_DB=/path/to/typical.db LEC_OUT="$scratch/results" \
     fm_shell -f "$script"
 ```
+
+已验证的综合门级网表作为[第 05 阶段可测性设计](../05-Design-for-Test/)的扫描插入输入。第 05 阶段另行检查扫描插入后的功能模式。

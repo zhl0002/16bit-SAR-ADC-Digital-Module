@@ -1,0 +1,11 @@
+Command: /home/yian/Project/16_Bit_SAR_ADC/Didital/DFT/runs/cali_logic_atpg_01/vcs_serial.VIKuJ3/./simv -no_save -l vcs_serial.log
+Chronologic VCS simulator copyright 1991-2024
+Contains Synopsys proprietary information.
+Compiler version W-2024.09-SP1_Full64; Runtime version W-2024.09-SP1_Full64;  Nov 19 00:52 2026
+ATPG_SERIAL_PASS patterns=349 cycles=205101 output_bit_checks=246743
+$finish called from file "tb_cali_logic_stuck.v", line 826.
+$finish at simulation time          20510100000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 20510100000 ps
+CPU Time:      3.760 seconds;       Data structure size:   0.2Mb
+Thu Nov 19 00:52:58 2026
