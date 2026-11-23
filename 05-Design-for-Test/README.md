@@ -53,3 +53,5 @@ SMIC18_VERILOG=/path/to/smic18.v \
 ```
 
 脚本打印仿真目录并保留编译、仿真日志。检查 `ATPG_SERIAL_PASS patterns=349 cycles=205101 output_bit_checks=246743`。本轮门级回放未加载 SDF。扫描网表和 SCANDEF 可交给后续布局布线，物理实现需同时配套 SDC 与物理工艺库。
+
+扫描门级网表和 SCANDEF 在[第 06 阶段布局布线](../06-Place-and-Route/)用作物理实现输入。
