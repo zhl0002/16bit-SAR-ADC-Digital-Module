@@ -1,0 +1,17 @@
+#!tvf
+// Substitute each @...@ token with a local absolute path.
+// Run from a dedicated DRC output directory.
+tvf::VERBATIM {
+LAYOUT PATH "@GDS_1NM@"
+LAYOUT SYSTEM GDSII
+LAYOUT PRIMARY "cali_logic"
+
+DRC RESULTS DATABASE "cali_logic_compact_10ns.drc.results" ASCII
+DRC CELL NAME YES CELL SPACE XFORM
+DRC SUMMARY REPORT "cali_logic_compact_10ns.drc.summary" REPLACE HIER
+DRC MAXIMUM RESULTS 1000
+DRC MAXIMUM VERTEX 4096
+DRC ICSTATION YES
+}
+
+source "@SMIC18_DRC_DECK@"

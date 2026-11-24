@@ -1,0 +1,9 @@
+rule,reported_result_count,expanded_occurrence_count,group,result_limit_reached
+BD_1,29,36,chip_boundary,no
+BD_2a,1000,1000,chip_boundary,yes
+M2_7,1,1,metal_density,no
+M3_7,1,1,metal_density,no
+M4_7,1,1,metal_density,no
+M5_7,1,1,metal_density,no
+MT_6,1,1,metal_density,no
+TOTAL,1034,1041,,

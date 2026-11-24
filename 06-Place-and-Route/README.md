@@ -32,3 +32,5 @@
 | [`scripts/compact_routed_block.tcl`](scripts/compact_routed_block.tcl)、[`scripts/measure_area_trials.py`](scripts/measure_area_trials.py) | 用原版 NDM 复现紧凑候选，并从 DEF 与 ICC2 报告提取面积和检查状态 |
 
 原始检查点为 `cali_logic/final_routed_10ns`，紧凑版为 `cali_logic/packed_final`。本轮完成独立模块的版图实现与工程检查。正式流片还需确认签核 RC、顶层 I/O 预算、PVT 场景、晶圆厂规则验证和 100 µm × 100 µm 面积目标。库、版图和提取文件由本地项目保管，其名称和用途见结果摘要。
+
+紧凑版 `cali_logic/packed_final` 已交给[第 07 阶段物理验证](../07-DRC-and-LVS/)。该阶段记录 Calibre 块级 DRC、LVS 和 ERC 的输入与结果。

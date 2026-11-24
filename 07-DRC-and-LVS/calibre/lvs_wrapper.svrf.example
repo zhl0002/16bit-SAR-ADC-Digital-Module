@@ -1,0 +1,18 @@
+// Substitute each @...@ token with a local absolute path.
+// Run from a dedicated LVS output directory.
+LAYOUT PATH "@GDS_1NM@"
+LAYOUT SYSTEM GDSII
+LAYOUT PRIMARY "cali_logic"
+
+SOURCE PATH "@REFERENCE_V5_CDL@"
+SOURCE SYSTEM SPICE
+SOURCE PRIMARY "cali_logic"
+
+MASK SVDB DIRECTORY "svdb" QUERY
+LVS REPORT "lvs.report"
+LVS EXECUTE ERC YES
+ERC RESULTS DATABASE "erc.results"
+ERC CELL NAME YES CELL SPACE XFORM
+DRC ICSTATION YES
+
+INCLUDE "@SMIC18_LVS_DECK@"
