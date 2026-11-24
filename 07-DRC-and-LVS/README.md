@@ -22,3 +22,5 @@
 | [`reports/input_fingerprints.txt`](reports/input_fingerprints.txt) | 记录本轮 GDS、参考网表和报告的 SHA-256，用于对照工程归档 |
 
 Calibre 版本为 v2025.1_16.10。版图、完整 CDL、原始结果库和晶圆厂规则由本地工程保管。当前状态为**块级 LVS 通过，DRC 与 ERC 待顶层签核复核**。最终整片版图需在芯片边界和金属填充定稿后重跑物理验证。
+
+已通过块级 LVS 的 GDS 和 v5 CDL 交给[第 08 阶段寄生参数提取](../08-Parasitic-Extraction/)，用于建立 Calibre PHDB 和核对工程版提取输入。

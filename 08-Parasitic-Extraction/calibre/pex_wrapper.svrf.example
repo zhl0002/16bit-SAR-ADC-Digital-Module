@@ -1,0 +1,14 @@
+// Replace the three @...@ tokens with the local project paths.
+// In the GUI use the documented H-Cells and x-Cells lists for Gate Level RCC.
+LAYOUT PATH "@CALI_LOGIC_GDS@"
+LAYOUT SYSTEM GDSII
+LAYOUT PRIMARY "cali_logic"
+SOURCE PATH "@CALI_LOGIC_REFERENCE_CDL@"
+SOURCE SYSTEM SPICE
+SOURCE PRIMARY "cali_logic"
+
+MASK SVDB DIRECTORY "svdb" QUERY XRC
+LVS REPORT "lvs.report"
+PEX NETLIST "cali_logic.spef" SPEF PRIMETIME SOURCENAMES
+
+INCLUDE "@LOCAL_PEX_RULE_ENTRY@"

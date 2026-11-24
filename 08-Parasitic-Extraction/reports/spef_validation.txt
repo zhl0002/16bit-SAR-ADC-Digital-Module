@@ -1,0 +1,12 @@
+Design: cali_logic
+RC corner: typ_trial, SI enabled for the coupled export
+Coupled SPEF
+  coupled_caps: 31274
+  ground_caps: 77270
+  nets: 3367
+  resistors: 73903
+Grounded-coupling comparison
+  ground_caps: 77270
+  nets: 3367
+  resistors: 73903
+Extracted net sets: identical
