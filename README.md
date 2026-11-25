@@ -6,6 +6,6 @@
 
 | 版本 | 内容 |
 | --- | --- |
-| [v1 · 16bit-SAR-ADC-Digital-Module-Cali-Logic-v1](16bit-SAR-ADC-Digital-Module-Cali-Logic-v1/) | 当前设计基线。包含 Verilog 源码、RTL 设计与验证、逻辑综合、形式等价验证、DFT、布局布线、DRC/LVS、PEX、STA 和待完成事项，共十个子项目。 |
+| [v1](v1/) | 当前设计基线。包含 Verilog 源码、RTL 设计与验证、逻辑综合、形式等价验证、DFT、布局布线、DRC/LVS、PEX、STA 和待完成事项，共十个子项目。 |
 
 后续优化版本将在此并列归档。
