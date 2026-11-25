@@ -1,0 +1,17 @@
+****************************************
+Report : clock
+Design : cali_logic
+Version: W-2024.09-SP3
+Date   : Tue Nov 24 17:42:06 2026
+****************************************
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    I - Inactive   clock
+
+Clock             Period          Waveform            Attrs     Sources
+-----------------------------------------------------------------------
+cal_clk            10.00          {0 5}                         {clk_i}
+
+1

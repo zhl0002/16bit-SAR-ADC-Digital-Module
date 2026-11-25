@@ -1,0 +1,9 @@
+cali_logic engineering STA input fingerprints (SHA-256)
+
+b27d57c9fc98817525ee4a83196ad0c6e12f6c88eeab956cd731403194210004  cali_logic_compact_10ns.v
+56e783567c5b750857c575b2f47cfb7cbf5b1f7948451da83df9ef773b473ce0  cali_logic_compact_10ns.sdc (local P&R original)
+f319497f0075aad472e5a8eb5c3f05ef651c721c06194ff552f8c139370ca5bc  cali_logic_pex_engineering_coupled.pack_seed_par_25.spef
+
+The replay script uses the published SDC in constraints/.
+The published SDC omits the original workstation source-path comment.
+Both copies retain the same Tcl commands. Use the local SMIC18 typical.db.

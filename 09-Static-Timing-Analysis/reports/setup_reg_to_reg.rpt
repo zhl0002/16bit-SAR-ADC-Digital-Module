@@ -1,0 +1,111 @@
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type max
+	-max_paths 1
+	-start_end_type reg_to_reg
+	-sort_by slack
+Design : cali_logic
+Version: W-2024.09-SP3
+Date   : Tue Nov 24 17:42:19 2026
+****************************************
+
+
+  Startpoint: bit_q_reg[2]
+               (rising edge-triggered flip-flop clocked by cal_clk)
+  Endpoint: weight_q_reg[6][4]
+               (rising edge-triggered flip-flop clocked by cal_clk)
+  Last common pin: clk_i
+  Path Group: cal_clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock cal_clk (rise edge)                             0.0000     0.0000
+  clock source latency                                  0.0000     0.0000
+  clk_i (in)                                            0.0000 &   0.0000 r
+  ZCTSBUF_23293_10/Y (BUFX16)                           0.0852 &   0.0852 r
+  ZCTSBUF_14483_0/Y (BUFX8)                             0.1935 &   0.2787 r
+  bit_q_reg[2]/CK (SDFFSXL)                             0.0083 &   0.2870 r
+  bit_q_reg[2]/QN (SDFFSXL)                             1.3472 &   1.6342 r
+  U2113/Y (OAI211X1)                                    0.1030 &   1.7372 f
+  U2244/Y (INVX1)                                       0.4863 &   2.2236 r
+  ZBUF_2696_inst_304/Y (BUFX4)                          0.6504 &   2.8740 r
+  U2406/Y (MXI2X2)                                      0.3245 &   3.1985 r
+  sub_229/U67/Y (INVX2)                                 0.0484 &   3.2468 f
+  sub_229/U64/Y (AND2X2)                                0.1072 &   3.3540 f
+  sub_229/U35/Y (AND2X2)                                0.1163 &   3.4704 f
+  sub_229/U36/Y (AND2X2)                                0.1153 &   3.5857 f
+  sub_229/U37/Y (AND2X2)                                0.1179 &   3.7036 f
+  sub_229/U38/Y (AND2X2)                                0.1151 &   3.8187 f
+  sub_229/U39/Y (AND2X2)                                0.1086 &   3.9272 f
+  sub_229/U40/Y (AND2X2)                                0.1169 &   4.0442 f
+  sub_229/U41/Y (AND2X2)                                0.1137 &   4.1579 f
+  sub_229/U42/Y (AND2X2)                                0.1119 &   4.2699 f
+  sub_229/U43/Y (AND2X2)                                0.1117 &   4.3815 f
+  sub_229/U44/Y (AND2X2)                                0.1108 &   4.4923 f
+  sub_229/U45/Y (AND2X2)                                0.1173 &   4.6097 f
+  sub_229/U46/Y (AND2X2)                                0.1161 &   4.7257 f
+  sub_229/U47/Y (AND2X2)                                0.1145 &   4.8402 f
+  sub_229/U48/Y (AND2X2)                                0.1148 &   4.9551 f
+  sub_229/U49/Y (AND2X2)                                0.1104 &   5.0654 f
+  sub_229/U50/Y (AND2X2)                                0.1094 &   5.1749 f
+  sub_229/U51/Y (AND2X2)                                0.1104 &   5.2852 f
+  sub_229/U52/Y (AND2X2)                                0.1204 &   5.4057 f
+  sub_229/U53/Y (AND2X2)                                0.1146 &   5.5202 f
+  sub_229/U54/Y (AND2X2)                                0.1154 &   5.6357 f
+  sub_229/U55/Y (AND2X2)                                0.1154 &   5.7510 f
+  sub_229/U56/Y (AND2X2)                                0.1094 &   5.8604 f
+  sub_229/U57/Y (AND2X2)                                0.1123 &   5.9727 f
+  sub_229/U58/Y (AND2X2)                                0.1126 &   6.0852 f
+  sub_229/U59/Y (AND2X2)                                0.1138 &   6.1990 f
+  sub_229/U60/Y (AND2X2)                                0.1147 &   6.3137 f
+  sub_229/U61/Y (AND2X2)                                0.1128 &   6.4265 f
+  sub_229/U62/Y (AND2X2)                                0.1171 &   6.5436 f
+  sub_229/U63/Y (AND2X2)                                0.1090 &   6.6526 f
+  sub_229/U65/Y (AND2X2)                                0.1224 &   6.7750 f
+  sub_229/U1/Y (NAND2X1)                                0.0814 &   6.8564 r
+  U1841/Y (AND2X4)                                      0.2064 &   7.0629 r
+  add_32/U65/Y (OR2X2)                                  0.1830 &   7.2459 r
+  add_32/U64/Y (NAND3X1)                                0.1280 &   7.3738 f
+  add_32/U249/Y (NAND2X2)                               0.0886 &   7.4625 r
+  add_32/U248/Y (NAND2X2)                               0.0459 &   7.5083 f
+  add_32/U242/Y (NAND2X2)                               0.0590 &   7.5673 r
+  add_32/U33/Y (AOI21X2)                                0.0588 &   7.6261 f
+  add_32/U5/Y (OAI21X2)                                 0.1293 &   7.7554 r
+  add_32/U243/Y (XOR2X2)                                0.1860 &   7.9413 f
+  U1842/Y (INVX4)                                       0.0505 &   7.9918 r
+  U2582/Y (XOR2X2)                                      0.1842 &   8.1761 r
+  U2580/Y (NAND2X2)                                     0.0443 &   8.2204 f
+  U2334/Y (AOI21X2)                                     0.1221 &   8.3425 r
+  U2332/Y (NAND2X2)                                     0.0652 &   8.4077 f
+  ZBUF_28_inst_355/Y (BUFX12)                           0.1277 &   8.5354 f
+  U2579/Y (CLKINVX8)                                    0.0437 &   8.5791 r
+  U2578/Y (OAI221X2)                                    0.1093 &   8.6884 f
+  U1853/Y (OR2X4)                                       0.1853 &   8.8738 f
+  ZBUF_73_inst_556/Y (BUFX3)                            0.1018 &   8.9756 f
+  U3452/Y (OR2X2)                                       0.1416 &   9.1172 f
+  U1858/Y (OR3X2)                                       0.2217 &   9.3389 f
+  U3526/Y (OR2X2)                                       0.1762 &   9.5151 f
+  U2208/Y (CLKINVX3)                                    0.2339 &   9.7489 r
+  U2658/Y (MX2X1)                                       0.2312 &   9.9802 f
+  weight_q_reg[6][4]/D (SDFFRHQXL)                      0.0001 &   9.9803 f
+  data arrival time                                                9.9803
+
+  clock cal_clk (rise edge)                            10.0000    10.0000
+  clock source latency                                  0.0000    10.0000
+  clk_i (in)                                            0.0000 &  10.0000 r
+  ZCTSBUF_23293_10/Y (BUFX16)                           0.0852 &  10.0852 r
+  ZCTSBUF_4389_2/Y (BUFX12)                             0.1684 &  10.2536 r
+  weight_q_reg[6][4]/CK (SDFFRHQXL)                     0.0033 &  10.2570 r
+  clock reconvergence pessimism                         0.0000    10.2570
+  library setup time                                   -0.2631     9.9939
+  data required time                                               9.9939
+  ------------------------------------------------------------------------------
+  data required time                                               9.9939
+  data arrival time                                               -9.9803
+  ------------------------------------------------------------------------------
+  slack (MET)                                                      0.0136
+
+
+1

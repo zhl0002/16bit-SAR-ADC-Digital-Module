@@ -1,0 +1,13 @@
+****************************************
+Report : global_timing
+	-group cal_clk
+	-format { narrow }
+Design : cali_logic
+Version: W-2024.09-SP3
+Date   : Tue Nov 24 17:42:11 2026
+****************************************
+
+No setup violations found.
+
+No hold violations found.
+1

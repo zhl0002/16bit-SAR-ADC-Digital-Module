@@ -1,0 +1,179 @@
+Information: Checking 'no_input_delay'.
+Warning: There are 9 ports with no clock-relative input delay specified.
+Since the variable 'timing_input_port_default_clock' is 'false',
+paths from such ports will be unconstrained.
+
+Ports
+------------------------------------------------------------
+cal_go_i
+cmp_done_i
+cmp_result_i
+rst_ni
+weight_rd_addr_i[0]
+weight_rd_addr_i[1]
+weight_rd_addr_i[2]
+weight_rd_addr_i[3]
+weight_rd_addr_i[4]
+
+Information: Checking 'no_driving_cell'.
+Warning: There are 12 ports with parasitics but with no driving cell.
+
+Ports
+------------------------------------------------------------
+cal_go_i
+clk_i
+cmp_done_i
+cmp_result_i
+rst_ni
+scan_en
+scan_in
+weight_rd_addr_i[0]
+weight_rd_addr_i[1]
+weight_rd_addr_i[2]
+weight_rd_addr_i[3]
+weight_rd_addr_i[4]
+
+Information: Checking 'unconstrained_endpoints'.
+Warning: There are 121 endpoints which are not constrained for maximum delay.
+
+Endpoint
+--------------------------------------------------------------------------------
+cal_bp_sel_b_o[8]
+cal_bp_sel_b_o[7]
+cal_bp_sel_b_o[6]
+cal_bp_sel_b_o[5]
+cal_bp_sel_b_o[4]
+cal_bp_sel_b_o[3]
+cal_bp_sel_b_o[2]
+cal_bp_sel_b_o[1]
+cal_bp_sel_b_o[0]
+cal_bp_sel_b_o[29]
+cal_bp_sel_b_o[28]
+cal_bp_sel_b_o[27]
+cal_bp_sel_b_o[26]
+cal_bp_sel_b_o[25]
+cal_bp_sel_b_o[24]
+cal_bp_sel_b_o[23]
+cal_bp_sel_b_o[22]
+cal_bp_sel_b_o[21]
+cal_bp_sel_b_o[20]
+cal_bp_sel_b_o[19]
+cal_bp_sel_b_o[18]
+cal_bp_sel_b_o[17]
+cal_bp_sel_b_o[16]
+cal_bp_sel_b_o[15]
+cal_bp_sel_b_o[14]
+cal_bp_sel_b_o[13]
+cal_bp_sel_b_o[12]
+cal_bp_sel_b_o[11]
+cal_bp_sel_b_o[10]
+cal_bp_sel_b_o[9]
+cal_bp_sel_a_o[6]
+cal_bp_sel_a_o[8]
+cal_bp_sel_a_o[0]
+cal_bp_sel_a_o[2]
+cal_bp_sel_a_o[4]
+cal_bp_sel_b_o[36]
+cal_bp_sel_b_o[38]
+cal_bp_sel_b_o[30]
+cal_bp_sel_b_o[32]
+cal_bp_sel_b_o[34]
+cal_bp_sel_a_o[30]
+cal_bp_sel_a_o[28]
+cal_bp_sel_a_o[26]
+weight_rd_data_o[5]
+weight_rd_data_o[3]
+weight_rd_data_o[1]
+cal_bp_sel_a_o[24]
+cal_bp_sel_a_o[22]
+cal_bp_sel_a_o[20]
+cal_bp_sel_a_o[18]
+cal_bp_sel_a_o[16]
+cal_bp_sel_a_o[10]
+cal_bp_sel_a_o[12]
+cal_bp_sel_a_o[14]
+weight_rd_data_o[24]
+weight_rd_data_o[26]
+weight_rd_data_o[28]
+weight_rd_data_o[16]
+weight_rd_data_o[20]
+weight_rd_data_o[22]
+cal_release_ready_o
+cal_bp_sel_a_o[38]
+cal_bp_sel_a_o[36]
+weight_rd_data_o[7]
+weight_rd_data_o[14]
+cal_bp_sel_a_o[32]
+cal_bp_sel_a_o[34]
+weight_rd_data_o[17]
+weight_rd_data_o[13]
+cal_bp_sel_a_o[7]
+cal_bp_sel_a_o[3]
+cal_bp_sel_b_o[35]
+cal_bp_sel_b_o[39]
+cal_bp_sel_b_o[31]
+cal_bp_sel_a_o[27]
+weight_rd_data_o[4]
+cal_bp_sel_a_o[23]
+weight_rd_data_o[0]
+cal_bp_sel_a_o[15]
+cal_bp_sel_a_o[19]
+cal_bp_sel_a_o[11]
+weight_rd_data_o[29]
+error_o[2]
+weight_rd_data_o[25]
+weight_rd_data_o[21]
+cal_bp_sel_a_o[39]
+weight_rd_data_o[6]
+weight_rd_data_o[15]
+cal_bp_sel_a_o[31]
+cal_bp_sel_a_o[35]
+weights_valid_o
+error_o[1]
+scan_out
+phase_o[0]
+weight_rd_data_o[10]
+phase_o[1]
+weight_rd_data_o[30]
+weight_rd_data_o[18]
+weight_rd_data_o[9]
+weight_rd_data_o[8]
+cal_bp_sel_a_o[5]
+cal_bp_sel_a_o[9]
+cal_bp_sel_a_o[1]
+cal_bp_sel_b_o[37]
+cal_bp_sel_b_o[33]
+cal_bp_sel_a_o[29]
+cal_bp_sel_a_o[25]
+weight_rd_data_o[2]
+cal_bp_sel_a_o[21]
+cal_bp_sel_a_o[17]
+cal_bp_sel_a_o[13]
+weight_rd_valid_o
+weight_rd_data_o[27]
+cmp_req_o
+error_o[0]
+weight_rd_data_o[11]
+weight_rd_data_o[19]
+weight_rd_data_o[23]
+cal_bp_sel_a_o[37]
+weight_rd_data_o[12]
+cal_bp_sel_a_o[33]
+
+Information: Checking 'unexpandable_clocks'.
+ Failed clocks set      Related clocks           Original Period     Expanded Period     Added Edges     Voltage Config
+-----------------------------------------------------------------------------------------------------------------------
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+Information: Checking 'voltage_level'.
+
+Check cell voltage level related issues including rail voltages
+Cell Name                      min/max    issues found 
+----------------------------------------------------------------------
+0
