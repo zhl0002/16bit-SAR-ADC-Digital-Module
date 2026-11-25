@@ -13,6 +13,6 @@
 | 07 | [物理验证（DRC & LVS）](07-DRC-and-LVS/) | 用 Calibre 检查 SMIC18 版图规则和电路连接，块级 LVS 通过，边界和密度待顶层复核 | Calibre 配置示例、CDL 修正脚本、规则计数与验证摘要 |
 | 08 | [寄生参数提取（PEX）](08-Parasitic-Extraction/) | 配置 Calibre xRC，验证工程规则下的 PHDB 和 PDB，核对 ICC2 工程版 SPEF | Calibre 配置示例、提取与 SPEF 校验报告、文件校验值 |
 | 09 | [静态时序分析（STA）](09-Static-Timing-Analysis/) | 用 PrimeTime 验证紧凑版 cali_logic 的寄生标注和 10 ns 功能模式内部时序 | 复跑 Tcl、试分析 SDC、时钟、约束覆盖和建立／保持时间报告 |
-| 10 | [顶层集成与签核准备](10-Integration-and-Signoff/) | 核对 `cali_logic` 各阶段的待补项，明确 ADC 顶层接口和签核依赖 | 阶段缺项、顶层接口验收条件和版图后验证清单 |
+| 10 | [还未完成的部分](10-Integration-and-Signoff/) | 核对 `cali_logic` 各阶段的待补项，明确 ADC 顶层接口和签核依赖 | 阶段缺项、顶层接口验收条件和版图后验证清单 |
 
 第 01 阶段覆盖完整数字模块。第 02 至 09 阶段以独立的 `cali_logic` 为对象。第 10 阶段记录模块交接时的待补工作和 ADC 顶层验收条件。
